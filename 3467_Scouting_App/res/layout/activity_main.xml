@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+   	<View
+  		android:layout_width="1dp"
+  		android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="400dip"
+        android:layout_height="400dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:contentDescription="@+string/logo"
+        android:paddingBottom="40dp"
+        android:src="@drawable/polo_logo" />
+
+    <Button
+        android:id="@+id/team_stats_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="55dp"
+        android:gravity="center"
+        android:text="@string/team_stats"
+        android:onClick="startTeamStats"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/pit_scouting_button"
+        android:layout_width="250dip"
+        android:layout_height="100dip"
+        android:layout_alignBottom="@+id/match_scouting_button"
+        android:layout_alignTop="@+id/match_scouting_button"
+        android:layout_toLeftOf="@+id/team_stats_button"
+        android:text="@string/pit_scouting"
+        android:onClick="startPitScouting" 
+        android:textSize="30sp"/>
+
+    <Button
+        android:id="@+id/match_scouting_button"
+        android:layout_width="250dip"
+        android:layout_height="100dip"
+        android:layout_alignBottom="@+id/team_stats_button"
+        android:layout_toRightOf="@+id/team_stats_button"
+        android:onClick="startMatchScoutingIntro"
+        android:text="@string/match_scouting" 
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/welcome_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView1"
+        android:gravity="center"
+        android:background="#110300"
+		android:textColor="#FFFFFF"
+        android:text="@string/welcome_page_text"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/welcome_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/welcome_page"
+        android:gravity="center"
+        android:text="@string/welcome_warning" 
+        android:textSize="30sp"/>
+
+</RelativeLayout>
